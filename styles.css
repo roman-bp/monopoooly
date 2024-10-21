@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ecf0f1;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    width: 660px;
+    height: 660px;
+    gap: 2px;
+    border: 2px solid #2c3e50;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+    font-size: 12px;
+  }
+  
+  /* Специфічні клітинки */
+  .start {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .street {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .event, .chance, .tax {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .parking {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .jail {
+    background-color: #9b59b6;
+    color: white;
+  }
+  
+  /* Розташування по периметру */
+  .cell:nth-child(1) { grid-column: 1 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(2) { grid-column: 2 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(3) { grid-column: 3 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(4) { grid-column: 4 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(5) { grid-column: 5 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(6) { grid-column: 6 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(7) { grid-column: 7 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(8) { grid-column: 8 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(9) { grid-column: 9 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(10) { grid-column: 10 / span 1; grid-row: 1 / span 1; }
+  
+  .cell:nth-child(11) { grid-column: 11 / span 1; grid-row: 1 / span 1; }
+  .cell:nth-child(12) { grid-column: 11 / span 1; grid-row: 2 / span 1; }
+  .cell:nth-child(13) { grid-column: 11 / span 1; grid-row: 3 / span 1; }
+  .cell:nth-child(14) { grid-column: 11 / span 1; grid-row: 4/ span 1; }
+  .cell:nth-child(15) { grid-column: 11 / span 1; grid-row: 5 / span 1; }
+  .cell:nth-child(16) { grid-column: 11 / span 1; grid-row: 6 / span 1; }
+  .cell:nth-child(17) { grid-column: 11 / span 1; grid-row: 7 / span 1; }
+  .cell:nth-child(18) { grid-column: 11 / span 1; grid-row: 8 / span 1; }
+  .cell:nth-child(19) { grid-column: 11 / span 1; grid-row: 9 / span 1; }
+  .cell:nth-child(20) { grid-column: 11 / span 1; grid-row: 10 / span 1; }
+  .cell:nth-child(21) { grid-column: 11 / span 1; grid-row: 11 / span 1; }
+  .cell:nth-child(22) { grid-column: 11/ span 1; grid-row: 11 / span 1; }
+
+
+
+  .cell:nth-child(23) { grid-column: 10 / span 1; grid-row: 11/ span 1; }
+  .cell:nth-child(24) { grid-column: 9 / span 1; grid-row: 11 / span 1; }
+  .cell:nth-child(25) { grid-column: 8 / span 1; grid-row: 11 / span 1; }
+  .cell:nth-child(26) { grid-column: 7 / span 1; grid-row: 11 / span 1; }
+  .cell:nth-child(27) { grid-column: 6 / span 1; grid-row: 11 / span 1; }
+  .cell:nth-child(28) { grid-column: 5 / span 1; grid-row: 11 / span 1; }
+  .cell:nth-child(29) { grid-column: 4 / span 1; grid-row: 11 / span 1; }  
+  .cell:nth-child(30) { grid-column: 3 / span 1; grid-row: 11 / span 1; }
+  .cell:nth-child(31) { grid-column: 2 / span 1; grid-row: 11/ span 1; }
+  .cell:nth-child(32) { grid-column: 1 / span 1; grid-row: 11/ span 1; }
+ 
+
+
+
+  .cell:nth-child(33) { grid-column: 1 / span 1; grid-row: 10/ span 1; }
+  .cell:nth-child(34) { grid-column: 1 / span 1; grid-row: 9/ span 1; }
+  .cell:nth-child(35) { grid-column: 1 / span 1; grid-row: 8 / span 1; }
+  .cell:nth-child(36) { grid-column: 1 / span 1; grid-row: 7 / span 1; }
+  .cell:nth-child(37) { grid-column: 1 / span 1; grid-row: 6 / span 1; }
+  .cell:nth-child(38) { grid-column: 1 / span 1; grid-row: 5 / span 1; }
+  .cell:nth-child(39) { grid-column: 1 / span 1; grid-row: 4 / span 1; }
+  .cell:nth-child(40) { grid-column: 1 / span 1; grid-row: 3 / span 1; }
+  .cell:nth-child(41  ) { grid-column: 1 / span 1; grid-row: 2 / span 1; }
+  
