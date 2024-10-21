@@ -4,80 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Монополія</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .center-image {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      height: 300px;
-    }
-
-    .game-board {
-      position: relative;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/cabinet.css">
 </head>
 <body>
   <div class="game-board">
     <!-- Верхня сторона -->
-    <div class="cell start">Старт</div>
-    <div class="cell street">Apple</div>
-    <div class="cell street">Google</div>
+    <div class="cell start">Старт<div class="player-token" id="player1-token"></div><div class="player-token" id="player2-token"></div></div>
+    <div class="cell street" data-owner="" data-price="200">Apple</div>
+    <div class="cell street" data-owner="" data-price="250">Google</div>
     <div class="cell event">Казна</div>
-    <div class="cell street">Tesla</div>
+    <div class="cell street" data-owner="" data-price="300">Tesla</div>
     <div class="cell tax">Податок</div>
-    <div class="cell street">Amazon</div>
-    <div class="cell street">Microsoft</div>
+    <div class="cell street" data-owner="" data-price="150">Amazon</div>
+    <div class="cell street" data-owner="" data-price="180">Microsoft</div>
     <div class="cell chance">Шанс</div>
-    <div class="cell street">Facebook</div>
-    <div class="cell street">сделки</div>
-   
+    <div class="cell street" data-owner="" data-price="220">Facebook</div>
+    <div class="cell street" data-owner="" data-price="180">сделки</div>
 
     <!-- Права сторона -->
-    <div class="cell street">eBay</div>
-    <div class="cell street">Twitter</div>
-    <div class="cell street">Netflix</div>
-    <div class="cell street">Spotify</div>
-    <div class="cell street">Airbnb</div>
+    <div class="cell street" data-owner="" data-price="300">eBay</div>
+    <div class="cell street" data-owner="" data-price="350">Twitter</div>
+    <div class="cell street" data-owner="" data-price="280">Netflix</div>
+    <div class="cell street" data-owner="" data-price="320">Spotify</div>
+    <div class="cell street" data-owner="" data-price="250">Airbnb</div>
     <div class="cell chance">Шанс</div>
-    <div class="cell street">Nike</div>
+    <div class="cell street" data-owner="" data-price="200">Nike</div>
     <div class="cell event">Казна</div>
-    <div class="cell street">Sony</div>
-    <div class="cell street">Coca-Cola</div>
-    <div class="cell street">Disney</div>
+    <div class="cell street" data-owner="" data-price="240">Sony</div>
+    <div class="cell street" data-owner="" data-price="210">Coca-Cola</div>
+    <div class="cell street" data-owner="" data-price="260">Disney</div>
 
     <!-- Нижня сторона -->
-   
-    
-    <div class="cell street">Pepsi</div>
+    <div class="cell street" data-owner="" data-price="220">Pepsi</div>
     <div class="cell tax">Податок</div>
-    <div class="cell street">Samsung</div>
-    <div class="cell street">Adidas</div>
+    <div class="cell street" data-owner="" data-price="300">Samsung</div>
+    <div class="cell street" data-owner="" data-price="350">Adidas</div>
     <div class="cell jail">В'язниця</div>
-    <div class="cell street">PayPal</div>
-    <div class="cell street">Uber</div>
+    <div class="cell street" data-owner="" data-price="250">PayPal</div>
+    <div class="cell street" data-owner="" data-price="270">Uber</div>
     <div class="cell event">Казна</div>
-    <div class="cell street">Starbucks</div>
-    <div class="cell street">McDonald's</div>
+    <div class="cell street" data-owner="" data-price="290">Starbucks</div>
+    <div class="cell street" data-owner="" data-price="310">McDonald's</div>
 
     <!-- Ліва сторона -->
-    <div class="cell street">McDonald's</div>
-    <div class="cell street">Intel</div>
-    <div class="cell street">IBM</div>
-    <div class="cell street">Oracle</div>
-    <div class="cell street">Tesla Energy</div>
-    <div class="cell street">LinkedIn</div>
-    <div class="cell street">Shopify</div>
-    <div class="cell street">Google Cloud</div>
+    <div class="cell street" data-owner="" data-price="280">McDonald's</div>
+    <div class="cell street" data-owner="" data-price="300">Intel</div>
+    <div class="cell street" data-owner="" data-price="260">IBM</div>
+    <div class="cell street" data-owner="" data-price="320">Oracle</div>
+    <div class="cell street" data-owner="" data-price="330">Tesla Energy</div>
+    <div class="cell street" data-owner="" data-price="290">LinkedIn</div>
+    <div class="cell street" data-owner="" data-price="240">Shopify</div>
+    <div class="cell street" data-owner="" data-price="280">Google Cloud</div>
     <div class="cell event">Казна</div>
-   
-    
 
-    <!-- Вставка фото в центр -->
-    <img src="centralImage.jpg" alt="Центральне зображення" class="center-image">
+    <!-- Центральне зображення -->
+    <img src="images/centralImage.jpg" alt="Центральне зображення" class="center-image">
   </div>
+
+  <div id="game-container">
+    <h2 id="current-player">Хід: Гравець 1</h2>
+
+    <!-- Кабінети гравців -->
+    <div id="player-cabinets">
+      <div id="player-cabinet-1">
+        <h3>Гравець 1</h3>
+        <p id="player-position-Гравець 1">Позиція: 0</p>
+        <p id="player-balance-Гравець 1">Баланс: 1500</p>
+        <div id="player-properties-Гравець 1">
+          <h4>Нерухомість:</h4>
+          <ul id="property-list-Гравець 1"></ul>
+        </div>
+      </div>
+      <div id="player-cabinet-2">
+        <h3>Гравець 2</h3>
+        <p id="player-position-Гравець 2">Позиція: 0</p>
+        <p id="player-balance-Гравець 2">Баланс: 1500</p>
+        <div id="player-properties-Гравець 2">
+          <h4>Нерухомість:</h4>
+          <ul id="property-list-Гравець 2"></ul>
+        </div>
+      </div>
+    </div>
+
+    <button id="roll-button">Кинути кубики</button>
+  </div>
+
+  <!-- Підключення скриптів -->
+  <script src="js/player.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/gameLogic.js"></script>
+  <script src="js/rentLogic.js"></script>
+  <script src="js/chance.js"></script>
+  <script src="js/player_interaction_logic_complete.js"></script>
 </body>
 </html>
